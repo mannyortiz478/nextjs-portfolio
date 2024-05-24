@@ -6,27 +6,27 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "Cleaning Services Website",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+      "Simple React website that illustrtes the company's brand and services",
+    image: "/ai-mi-algorithm-svgrepo-com.png",
+    github: "https://github.com/mannyortiz478/aseara-react",
+    link: "https://aseara-web.vercel.app/"
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "Tagging Question",
+    description: "A web component that presents a question along with a selection of styled tags or chips for the user to drag and drop into an answer area. It includes features like an optional image with the question, a check answer button that highlights correct and incorrect responses, and the ability for users to reset and try again.",
+    image: "/tagging-question.png",
+    github: "https://github.com/mannyortiz478/tagging-question",
+    link: "https://tagging-question-number.vercel.app/",
   },
   {
-    name: "Kator Family Photos",
+    name: "Party-Ui Component",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+      "Web Component for adding and managing users visually represented as RPG characters within HAX sites. Integrated with DDD design system for consistent styling. Implemented JavaScript logic to restrict input, add/remove users, and trigger confetti animation on save.",
+    image: "/party-ui.png",
+    github: "https://github.com/mannyortiz478/haxcms-party-ui",
+    link: "https://polaris-chip-5vak.vercel.app/",
   },
 ]
 
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
     <section id="projects">
       <h1 className="my-10 text-center font-bold text-4xl">
         Projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+        <hr className="w-10 h-1 mx-auto my-4 bg-sky-400 border-0 rounded"></hr>
       </h1>
 
       <div className="flex flex-col space-y-28">
