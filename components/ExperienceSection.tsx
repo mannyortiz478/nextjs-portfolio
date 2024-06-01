@@ -59,10 +59,10 @@ const ExperienceSection = () => {
                   <div className="">
                     <div className="text-center">
                       <h2 className="text-2xl font-bold text-sky-600">{job.company}</h2>
-                      <p className="text-xl text-neutral-500">{job.location}</p>
-                      <p className="text-xl text-neutral-500">Role: {job.role}</p>
-                      <p className="text-xl text-neutral-500">Duration: {job.duration}</p>
-                      <p className="text-lg text-neutral-500 mt-4">{job.description}</p>
+                      <p className="text-xl text-neutral-800 dark:text-neutral-100">{job.location}</p>
+                      <p className="text-xl text-neutral-800 dark:text-neutral-100">Role: {job.role}</p>
+                      <p className="text-xl text-neutral-800 dark:text-neutral-100">Duration: {job.duration}</p>
+                      <p className="text-lg text-neutral-800 dark:text-neutral-100 mt-4">{job.description}</p>
                       <div className="flex flex-wrap justify-center mt-4">
                         {job.skillsUsed.map((skill, index) => (
                           <div key={index} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">

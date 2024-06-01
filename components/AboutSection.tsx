@@ -1,32 +1,33 @@
-import React from "react"
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaPython, FaJava, FaGitAlt, FaGithub, FaCloud } from "react-icons/fa";
+import { SiTypescript, SiMysql, SiJson, SiNextdotjs, SiTailwindcss, SiVercel, SiFirebase, SiJupyter, SiLinux, SiGooglecloud, SiMicrosoftazure, SiVirtualbox, SiTensorflow } from "react-icons/si";
 
 const skills = [
-  { skill: "HTML5" },
-  { skill: "CSS3" },
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "Python" },
-  { skill: "Java" },
-  { skill: "MySQL" },
-  { skill: "JSON" },
-  { skill: "React" },
-  { skill: "Next.js" },
-  { skill: "Tailwind CSS" },
-  { skill: "Git" },
-  { skill: "GitHub" },
-  { skill: "Vercel" },
-  { skill: "Prompt Engineering" },
-  { skill: "AI" },
-  { skill: "Firebase" },
-  { skill: "Jupyter Notebooks" },
-  { skill: "Linux" },
-  { skill: "Google Cloud" },
-  { skill: "Azure" },
-  { skill: "Virtual Box" },
-  { skill: "Tensor Flow" },
-  
-]
+  { skill: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
+  { skill: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
+  { skill: "JavaScript", icon: <FaJsSquare />, color: "#F7DF1E" },
+  { skill: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
+  { skill: "Python", icon: <FaPython />, color: "#3776AB" },
+  { skill: "Java", icon: <FaJava />, color: "#007396" },
+  { skill: "MySQL", icon: <SiMysql />, color: "#4479A1" },
+  { skill: "JSON", icon: <SiJson />, color: "#000000" },
+  { skill: "React", icon: <FaReact />, color: "#61DAFB" },
+  { skill: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
+  { skill: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06B6D4" },
+  { skill: "Git", icon: <FaGitAlt />, color: "#F05032" },
+  { skill: "GitHub", icon: <FaGithub />, color: "#181717" },
+  { skill: "Vercel", icon: <SiVercel />, color: "#000000" },
+  { skill: "Prompt Engineering", icon: null, color: "#FF5733" },
+  { skill: "AI", icon: null, color: "#4CAF50" },
+  { skill: "Firebase", icon: <SiFirebase />, color: "#FFCA28" },
+  { skill: "Jupyter Notebooks", icon: <SiJupyter />, color: "#F37626" },
+  { skill: "Linux", icon: <SiLinux />, color: "#FCC624" },
+  { skill: "Google Cloud", icon: <SiGooglecloud />, color: "#4285F4" },
+  { skill: "Azure", icon: <SiMicrosoftazure />, color: "#0089D6" },
+  { skill: "Virtual Box", icon: <SiVirtualbox />, color: "#183A61" },
+  { skill: "TensorFlow", icon: <SiTensorflow />, color: "#FF6F00" },
+];
 
 const AboutSection = () => {
   return (
@@ -42,22 +43,22 @@ const AboutSection = () => {
             <h1 className="text-center text-2xl text-sky-600 font-bold mb-6 md:text-left">
               Get to know me!
             </h1>
-            <p>
+            <p className="text-lg">
               Hi, my name is Manny and I am a{" "}
               <span className="font-bold text-sky-400 ">{"highly ambitious"}</span>,
-              <span className="font-bold text-sky-400 ">{" self-motivated"}</span>, and
-              <span className="font-bold text-sky-400 ">{" curosity driven"}</span> 
+              <span className="font-bold text-sky-400 ">{" self-motivated"}</span>,
+              <span className="font-bold text-sky-400 ">{" curiosity driven"}</span>, and 
               <span className="font-bold text-sky-400 ">{" adaptable"}</span> developer
               based in PA.
             </p>
             <br />
-            <p>
-              I am currently purseuing a undergraduate Bachelors of Science in Enterprise Technology Integration at Penn State University.
+            <p className="text-lg">
+              I am currently pursuing an undergraduate Bachelor of Science in Enterprise Technology Integration at Penn State University.
             </p>
             <br />
-            <p>
+            <p className="text-lg">
               I have a wide range of hobbies and passions that keep me busy.
-              From reading, playing sports, to traveling
+              From reading, playing sports, to traveling,
               I am always seeking new experiences and love to keep myself
               engaged and learning new things.
             </p>
@@ -65,9 +66,9 @@ const AboutSection = () => {
             <p>
               I believe that you should{" "}
               <span className="font-bold text-sky-400">
-                you should have a growth mindset
+                have a growth mindset
               </span>{" "}
-              and that&#39;s what I strive to do, I have a passion for
+              and that&#39;s what I strive to do. I have a passion for
               technology and a desire to always push the limits of what is
               possible. I am excited to see where my career takes me and am
               always open to new opportunities.
@@ -78,13 +79,15 @@ const AboutSection = () => {
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
               {skills.map((item, idx) => {
                 return (
-                  <p
+                  <div
                     key={idx}
-                    className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
+                    className="flex items-center bg-gray-200 px-4 py-2 mr-2 mt-2 rounded font-semibold"
+                    style={{ backgroundColor: item.color }}
                   >
-                    {item.skill}
-                  </p>
-                )
+                    {item.icon && <span className="mr-2 text-white">{item.icon}</span>}
+                    <p className="text-white">{item.skill}</p>
+                  </div>
+                );
               })}
             </div>
             <Image
@@ -98,7 +101,7 @@ const AboutSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

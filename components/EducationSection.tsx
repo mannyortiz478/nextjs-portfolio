@@ -32,10 +32,10 @@ const EducationSection = () => {
           <div className="md:w-1/2">
             <div className="text-center md:text-left mb-6">
               <h2 className="text-2xl font-bold text-sky-600">{educationDetails.university}</h2>
-              <p className="text-xl text-neutral-500">{educationDetails.location}</p>
-              <p className="text-xl text-neutral-500">College: {educationDetails.college}</p>
-              <p className="text-xl text-neutral-500">Major: {educationDetails.major}</p>
-              <p className="text-xl text-neutral-500">Year: {educationDetails.year}</p>
+              <p className="text-xl text-neutral-100">{educationDetails.location}</p>
+              <p className="text-xl text-neutral-100">College: {educationDetails.college}</p>
+              <p className="text-xl text-neutral-100">Major: {educationDetails.major}</p>
+              <p className="text-xl text-neutral-100">Year: {educationDetails.year}</p>
             </div>
           </div>
         </div>
