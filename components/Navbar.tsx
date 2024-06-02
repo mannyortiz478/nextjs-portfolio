@@ -48,7 +48,24 @@ export default function Navbar() {
                 <h2 className="text-2xl font-bold">Manny Ortiz</h2>
               </div>
             </Link>
-            <div className="md:hidden">
+            <div className="flex items-center md:hidden">
+              <div className="mr-2">
+                {currentTheme === "dark" ? (
+                  <button
+                    onClick={() => setTheme("light")}
+                    className="bg-sky-400 p-2 rounded-xl"
+                  >
+                    <RiSunLine size={25} color="black" />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => setTheme("dark")}
+                    className="bg-slate-100 p-2 rounded-xl"
+                  >
+                    <RiMoonFill size={25} color="black" />
+                  </button>
+                )}
+              </div>
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-grey-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
@@ -85,43 +102,22 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="md:text-right">
-          <div className="flex items-center justify-end space-x-4">
-            <div className={navbar ? "flex space-x-4" : "hidden"}>
-              {currentTheme === "dark" ? (
-                <button
-                  onClick={() => setTheme("light")}
-                  className="bg-sky-400 p-2 rounded-xl"
-                >
-                  <RiSunLine size={25} color="black" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setTheme("dark")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiMoonFill size={25} color="black" />
-                </button>
-              )}
-            </div>
-            <div className={navbar ? "hidden" : "md:flex"}>
-              {currentTheme === "dark" ? (
-                <button
-                  onClick={() => setTheme("light")}
-                  className="bg-sky-400 p-2 rounded-xl"
-                >
-                  <RiSunLine size={25} color="black" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setTheme("dark")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiMoonFill size={25} color="black" />
-                </button>
-              )}
-            </div>
-          </div>
+        <div className="hidden md:flex md:items-center md:justify-end md:space-x-4">
+          {currentTheme === "dark" ? (
+            <button
+              onClick={() => setTheme("light")}
+              className="bg-sky-400 p-2 rounded-xl"
+            >
+              <RiSunLine size={25} color="black" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setTheme("dark")}
+              className="bg-slate-100 p-2 rounded-xl"
+            >
+              <RiMoonFill size={25} color="black" />
+            </button>
+          )}
         </div>
       </div>
     </header>

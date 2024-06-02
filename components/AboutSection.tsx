@@ -63,7 +63,7 @@ const AboutSection = () => {
               engaged and learning new things.
             </p>
             <br />
-            <p>
+            <p className="text-lg">
               I believe that you should{" "}
               <span className="font-bold text-sky-400">
                 have a growth mindset
