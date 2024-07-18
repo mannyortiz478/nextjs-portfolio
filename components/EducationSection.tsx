@@ -32,7 +32,7 @@ const EducationSection = () => {
 
           <div className="md:w-1/2">
             <div className="text-center md:text-left mb-6">
-              <h2 className="text-2xl font-bold text-sky-600">
+              <h2 className="text-2xl font-bold text-sky-500">
                 {educationDetails.university}
               </h2>
               <p className="text-xl text-neutral-800 dark:text-neutral-100 mb-3">{educationDetails.location}</p>

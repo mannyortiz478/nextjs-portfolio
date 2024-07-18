@@ -6,12 +6,11 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
-    name: "Cleaning Services Website",
-    description:
-      "Simple React website that illustrtes the company's brand and services",
-    image: "/ai-mi-algorithm-svgrepo-com.png",
-    github: "https://github.com/mannyortiz478/aseara-react",
-    link: "https://aseara-web.vercel.app/"
+    name: "WIREDIN Website",
+    description: "Simple user friendly website that illustrates the student organizations image. Includes features such as light/dark mode, interactive calendar and contact form.",
+    image: "/wiredin-screen.png",
+    github: "https://github.com/mannyortiz478/wiredin",
+    link: "https://wiredin-gules.vercel.app/"
   },
   {
     name: "Tagging Question",
@@ -28,6 +27,20 @@ const projects = [
     github: "https://github.com/mannyortiz478/haxcms-party-ui",
     link: "https://polaris-chip-5vak.vercel.app/",
   },
+  {
+    name: "React-Firebase Chat App",
+    description: "A basic chat application, where users are authenticated first and create their own chat room and type messages. Exposing myself to various technologies, applying new skills and enhancing the application.",
+    image: "/hero-image2.png",
+    github: "https://github.com/mannyortiz478/react-firebase-chat",
+    link: "#",
+  },
+  {
+    name: "AI Article Summarizer",
+    description: "An AI program that takes in a newspaper article and summarizes it for you. It uses NLP, and ML libraries such as textblob, nltk, newsaper. One cool feature is it gives you sentiment anaylsis and states whether positive or negative.",
+    image: "/article-1.png",
+    github: "https://github.com/mannyortiz478/Article-Summarizer-Ai/tree/main",
+    link: "#",
+  }
 ]
 
 const ProjectsSection = () => {
